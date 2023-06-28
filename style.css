@@ -292,7 +292,6 @@ header {
     transition: 0.3s;
 }
 
-
 .featured__all {
     display: flex;
     justify-content: center;
@@ -310,6 +309,182 @@ header {
     border: 1px solid #FF6A6A;
 }
 
+.featured__all button:hover {
+    background-color:#F26376;
+    color:#FFFFFF;
+}
+
+.cards__container {
+    background-color: #222224;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; 
+}
+
+.card {
+    height: 300px;
+    max-width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.card img {
+    height: 35px;
+    margin-bottom: 1.8rem;
+}
+
+.card figcaption {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.96px;
+    line-height: 24px;
+    color: #FBFBFB;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13.972px;
+    line-height: 17px;
+    text-align: center;
+    color: #FBFBFB;
+}
+
+.subscribe__container {
+    position: relative;
+    background-image: url('img/subscribe.png');
+    background-position: center bottom 0px;
+    background-repeat: no-repeat;
+    background-color: rgba(244, 244, 244, 0.8);
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.girl, .subscribe__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    width: 360px;
+}
+.girl img {
+    margin-bottom: 30px;
+}
+
+.girl p {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #222224;
+}
+
+.subscribe__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 167.2%;
+    text-align: center;
+    color: #222224;
+}
+
+.subscribe__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #222224;
+    margin-bottom: 2rem;
+}
+
+.subscribe__form input {
+    background-color: #E1E1E1;
+    height: 50px;
+    width: 240px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border: none;
+    padding-left: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.subscribe__form input:focus {
+    outline: 1px solid #F16D7F;
+}
+
+.subscribe__form button {
+    background: #F16D7F;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 1rem 1.5rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.subscribe__form button:hover {
+    color: #F16D7F;
+    background:  #E1E1E1;
+    border: 1px solid #F16D7F;
+}
+
+.copyright__container {
+    background-color: #222224;
+}
+
+.social__copyright {
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FBFBFB;
+}
+.social {
+    display: flex;
+    gap: 7px;
+}
+
+.social a {
+    display: flex;
+    background-color: #fff;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.social a:hover {
+    background-color: #F16D7F;
+    color: #FBFBFB;
+}
 
 @media screen and (max-width: 1024px) {
     .center {
@@ -333,7 +508,34 @@ header {
 
     .featured__item {
         width: 48%;
-    }   
+    }
+    
+    .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        height: 200px;
+        width: 320px;
+        max-width: none;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .girl, .subscribe__right{
+        height: 300px;
+    }
+
+    .subscribe__right{
+        padding-bottom: 140px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -379,5 +581,43 @@ header {
 
     .accesories {
         height: 111px;
+    }
+
+    .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        height: 200px;
+        width: 320px;
+        max-width: none;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .girl, .subscribe__right{
+        height: 300px;
+    }
+
+    .subscribe__right{
+        padding-bottom: 110px;
+    }
+
+    .social__copyright {
+        flex-direction: column-reverse;
+        height: 143px;
+        padding-top: 43px;
+        padding-bottom: 9px;
+    }
+
+    .container {
+        padding-bottom: 9px;
     }
 }
